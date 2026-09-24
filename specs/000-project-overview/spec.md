@@ -90,3 +90,40 @@ The MVP is considered complete when the system can:
 8. Communicate through MQTT.
 9. Run automated tests.
 10. Run locally using documented instructions.
+
+## Development Workflow
+
+The project follows the workflow below:
+
+1. Define the feature objective.
+2. Create or update the feature specification.
+3. Review and approve the specification.
+4. Create the implementation plan.
+5. Review and approve the plan.
+6. Create implementation tasks.
+7. Implement one task at a time.
+8. Write and execute automated tests.
+9. Validate the implementation against acceptance criteria.
+10. Update documentation.
+11. Commit the changes.
+
+## Feature Status
+
+Features MUST use one of the following statuses:
+
+- Draft
+- In Review
+- Approved
+- In Progress
+- Implemented
+- Validated
+- Deprecated
+
+## Traceability
+
+Every implementation task MUST reference its
+corresponding requirement.
+
+Every automated test SHOULD reference the behavior
+or acceptance criterion it validates.
+
