@@ -1,5 +1,5 @@
 import uuid
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Optional
 
 from pydantic import BaseModel, Field, field_validator
@@ -38,7 +38,7 @@ class MessageResponseData(BaseModel):
     message_id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     response: str = Field(..., max_length=5000)
     processing_time_ms: int
-    timestamp: datetime = Field(default_factory=datetime.utcnow)
+    timestamp: datetime = Field(default_factory=lambda: datetime.now(UTC))
 
 
 class MessageResponse(BaseModel):
